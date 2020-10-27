@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Blog</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="nav">
+	<ul>
+		<li>KAUTSAR</li>		
+		<li><a href="index.html">HOME </a></li>
+		<li class="active"><a href="about.html">ABOUT ME </a></li>
+		<li><a href="project.html">PROJECT </a></li>
+		<li><a href="kontak.html">CONTACT</a></li>
+	</ul>
+	</div>	
+	<!----about---->
+	<section class="about">
+		<div class="container">
+			<h3>LAPORAN PDF DENGAN DOMPDF LARAVEL</h3>
+			<h4>Laporan PDF dengan Dompdf Laravel</h4>	
+			<br>
+			<p>PDF masih menjadi semacam fitur yang paling dibutuhkan pada sebuah aplikasi atau sistem informasi. dengan tujuan untuk membuat cetak data, atau export data menjadi laporan yang membentuk PDF.</p>
+			<br>
+			<p>Salah satu cara untuk membuat cetak laporan PDF pada laravel, kita bisa menggunakan library DOMPDF. mungkin sebelumnya teman-teman sudah pernah menggunakan dan familiar dengan DOMPDF. pada saat membuat laporan PDF atau cetak laporan dengan PDF. dulu mungkin pada saat pertama kali belajar PHP dasar.</p>
+			<br>
+			<p>DOMPDF adalah library PHP yang bisa digunakan untuk membuat laporan PDF dengan PHP. DOMPDF bekerja dengan cara mengubah halam menjadi file PDF.</p>
+			<br>
+			<p>DOMPDF juga tersedia dan bisa kita gunakan pada laravel. dan cara menggunakan <strong>DOMPDF Laravel</strong> pun sangat mudah.</p>
+			<br>
+			<h4>PERSIAPAN DATA</h4>
+			<p>sebelum membuat laporan kita akan membutuhkan sebuah data, dimana data tersebut yang nantinya akan di panggil dalam file pdf</p>
+			<br>
+			<p>selanjutnya buat route baru untuk menampilkan data contoh(cosheet) dari database dan untuk menampilkan data (cosheet) sebagai pdf.</p>
+			<br>
+			<p>Route yang pertama '/cosheet' akan mengakses method index() dalam controller CosheetController.php route kedua '/cosheet/cetak_pdf' kata perintah untuk mengakses method cetak_pdf() dalam controller CosheetController.php</p>
+			<br>
+			<p>karena kita belum punya controller CosheetController.php maka sekarang buat controller tersebut. Saya membuat controller CosheetController.php</p>
+			<br>
+			<p>setelah selesai membuat controller tersebut, silahkan buka file tersebut </p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/cos1.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/cos2.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/cos3.jpg">
+				</div>	
+			</div>
+			<br>
+			<p>dengan loadview() kita menggunakan dompdf untuk membuka viewnya, kita isi nama view untuk halaman cetak pdf ini dengan view printcosheet.blade.php sambil kita passing data cosheet juga ke view ini</p>
+			<br>
+			<p>kemudian bagian terakhir kita return fungsi download() dari package dompdf untuk mencetak halaman menjadi file PDF dan mendownloadnya secara otomatis.</p>
+			<br>
+			<p>Penjelasan pada controller selesai. namun kita belum membuat view detail.blade.php dan printcosheet.blade.phpnya.</p>
+			<br>
+			<p>pada kedua buah view ini kita hanya menampilkan cosheetnya seperti biasa.</p>
+			<br>
+			<p>buat view baru, yaitu view detail.blade.php. dan satu lagi view printcosheet.blade.php</p>
+			<br>
+			<h4>resources/view/detail.blade.php</h4>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/detail1.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/detail2.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/detail3.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/detail4.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/detail5.jpg">
+				</div>	
+			</div>
+			<br>
+			<h4>resources/view/printCosheet.blade.php</h4>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/print1.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/print2.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/print3.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/print4.jpg">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/print5.jpg">
+				</div>	
+			</div>
+			<br>
+			<p>oke mari kita lihat hasil contoh membuat laporan pdf dengan DOMPDF laravel ini</p>
+			<br>
+			<p>Jalankan proyek laravelnya</p>
+			<br>
+			<p>php artisan serve</p>
+			<br>
+			<p>dan akses route cosheet.</p>
+			<br>
+			<p>localhost:8000/cosheet</p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/pdf.jpg">
+				</div>	
+			</div>
+		</div>
+	</section>
+	<br>	
+	<br>	
+	<!----label---->
+	<section class="label">
+		<div class="container">
+			<p></p>
+		</div>
+	</section>	
+	<br>	
+	<br>		
+	<footer>
+		<div class="container">
+			<small>Copyright &copy; 2020 - Diwangga Dafa Alkautsar. All Rights Reserved.</small>
+		</div>	
+	</footer>
+
+</body>
+</html>
