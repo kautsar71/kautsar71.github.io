@@ -18,8 +18,80 @@
 	<section class="about">
 		<div class="container">
 			<h3>FORM EDIT PADA LARAVEL</h3>
-			<h4>test</h4>	
-			<p>Diwangga Dafa Alkautsar, ia pertama kalinya menginjak bumi pada tanggal 30 mei 2003, sekarang ia sedang berusaha untuk menggapai mimpi mimpinya,tahun ini adalah tahun 2020 yang dimana tahun terakhir diwangga sekolah di smk wikrama bogor, di smk wikrama bogor diwangga mengambil di bidang rekayasa perangkat lunak dibidang tersebut diwangga sedang mencoba untuk menguasai HTML,CSS,PHP,LARAVEL,dan diwanggapun pernah mengikuti webinar webinar online.  </p>
+			<h4>UPDATE DATA MENGGUNAKAN LARAVEL</h4>	
+			<p>Sebelumnya saya sudah membuat view untuk menampilkan data cosheet.</p>
+			<p>Selanjutnya kita buat button edit atau link seperti berikut.</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit1.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Pada tombol edit tersebut kita memerintahkan untuk mengalihkan halaman ke route "cosheet/detail" sambil mengirimkan data id, data yang ingin di edit.</p>
+			<p>Maka sekarang kita buat route baru untuk edit agar data id yang dikirimkan sekalian kita kirim juga ke controller untuk kita ambil data cosheet yang ber id tersebut.</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit2.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>setelah itu lalu kita buat method dalam controller CosheetController.php</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit3.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Selanjutnya kita buat view dengan nama detail.blade.php karena kita akan menampilkan data cosheet yang ingin di edit.</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit4.JPG">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit5.JPG">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit6.JPG">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit7.JPG">
+				</div>	
+			</div>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit8.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Dan jangan lupa kita membuat route update agar data yg sudah kita ubah bisa kita simpan
+				oleh karena itu kita buat route cosheet/update</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit9.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Para route update ini kita tidak menggunakan method get, tapi menggunakan method post
+			pada route ini kita perintahkan untuk menjalankan method update dalam controller CosheetController.php</p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/edit10.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Lalu kita coba dengan menjalankan xampp dan masuk url localhost:8000/"nama-project",
+				Sekian untuk penjelasan kali ini, walaupun penjelasannya kurang dapat di pahami saya mohon maaf sebesar besarnya</p>
 		</div>
 	</section>
 	<br>	
