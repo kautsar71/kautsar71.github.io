@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Blog</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="nav">
+	<ul>
+		<li>KAUTSAR</li>		
+		<li><a href="index.html">HOME </a></li>
+		<li class="active"><a href="about.html">ABOUT ME </a></li>
+		<li><a href="project.html">PROJECT </a></li>
+		<li><a href="kontak.html">CONTACT</a></li>
+	</ul>
+	</div>	
+	<!----about---->
+	<section class="about">
+		<div class="container">
+			<h3>Mendeteksi Sebuah Wajah dan Mata/Eye Detection OpenCV (Bahasa Indonesia)</h3>
+			<h4>Tutorial Membuat Program Face, Eye Menggunakan OpenCV Python</h4>	
+			<br>
+			<p>Computer Vision atau yang lebih dikenal dan disingkat CV merupakan salah satu cara untuk mengolah video dan foto menggunakan barisan code. CV sendiri mendukung berbagai bahasa, contohnya Java, C++ dan pastinya Python yang juga akan kita pakai dalam tutorial Face dan Edge Detector kali ini menggunakan OpenCV.</p>
+			<br>
+			<p>Sebelum kita membuat program kita untuk Face dan Edge Detector kita memerlukan bantuan modul yaitu modul yang telah saya sebutkan diatas yaitu OpenCV. Untuk menginstall OpenCV kalian bisa menggunakan PIP. Caranya cukup ketikkan pip install opencv-python</p>
+			<br>
+			<p>Untuk mencek apakah modul sudah terinstall kedalam Python kalian. Kalian bisa buka Python, kemudian ketikkan  import cv2 Nah jika kalian tidak menjumpai error apapun kalian bisa lanjut untuk mulai mengikuti <strong>tutorial Membuat Program Face, Eye dan Edge Detector Menggunakan OpenCV Python</strong> berikut.</p>
+			<br>
+			<br>
+			<p>Nah, untuk gambar maupun video, kita masukkan terlebih dahulu kedua file yang telah kalian download tadi kedalam script Python kalian. Perlu diketahui disini saya sudah rename file saya menjadi face-detect.xml dan juga eye-detect.xml. Untuk mengimportnya kita gunakan  CascadeClassifier() method. Berikut adalah code untuk importnya.</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto1.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Maksud dari code diatas adalah kita memasukkan gambar kita dan juga file kita yang sebagai detector atau pendeteksi kedalam variabel. Hal ini untuk mempermudah lagi proses pemanggilan file ini nantinya. Selanjutnya kita akan terapkan codenya pada gambar kita.</p>
+			<br>
+			<p>Tapi sebelumnya kita harus ubah terlebih dahulu gambar awal kita menjadi hitam putih. Hal ini dilakukan karena sebuah foto dan juga video lebih mudah diproses menggunakan algoritma dalam keadaan hitam putih.</p>
+			<br>
+			<br>
+			<p>Untuk membuat gambar kita hitam putih kita gunakan </p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto2.JPG">
+				</div>	
+			</div>
+			<p>Code ini akan mengubah gambar kita menjadi hitam putih yang terletak dalam variabel gray Selanjutnya kita buat Code untuk Face Detector nya dengan menggunakan file yang telah didownload tadi.</p>
+			<br>
+			<p>Untuk menggunakannya kita cukup tuliskan seperti ini </p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto3.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Nah code ini menerapkan algoritma dari face kedalam gray, yang merupakan versi hitam putih dari gambar kita. Kemudian 2 parameter terakhir berfungsi sebagai angka keakuratan dari algoritma kita. Sama seperti nilai keakuratan dari Edge Detector.</p>
+			<br>
+			<p>Kita dapat mengubahnya dan menyesuaikan dengan sesuka hati. Tetapi umumnya digunakan angka 1.3 dan juga 5. Nah, variabel muka tersebut akan menghasilkan titik X muka, titik Y muka, lebar muka dan juga tinggi muka.</p>
+			<br>
+			<p>Untuk menggambar sebuah kotak di muka yang terdeteksi maka kita gunakan  for loop untuk setiap variabel dalam muka. Contoh codenya seperti ini.</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto4.JPG">
+				</div>	
+			</div>
+			<p>Nah setelah setiap variabel muka terambil kita akan gambar kotak pada wilayah muka tersebut. OpenCV memiliki banyak fitur Built-In untuk menggambar diatas gambar dan juga video. Tapi kali ini kita gunakan salah satu saja, yaitu  rectangle method untuk menggambar kotak pada area wajah kita.</p>
+			<br>
+			<p>Terlihat pada code diatas kita deklarasikan 5 parameter. Parameter pertama adalah letak dimana kita akan menggambar yaitu pada  img bukan gray karena kita gunakan gray untuk mendeteksi muka, tetapi kita gambar kedalam gambar yang berwarna atau gambar asli kita.</p>
+			<br>
+			<p>Kemudian parameter kedua yaitu tuple (x, y) yang merupakan titik kiri atas dari kotak persegi kita. Parameter ketiga yaitu tuple (x+w, y+h) untuk mendefinisikan titik kanan bawah persegi kita sehingga akan terbentuklah persegi dengan 2 titik tersebut.</p>
+			<br>
+			<p>Paraeter keempat adalah tuple untuk warna. Warna yang dianut OpenCV adalah BGR, yaitu Blue Green Red, kebalikan dari RGB. Valuenya masih sama, warna terkuat adalah value 255, nah karena saya ingin warna hijau maka saya gunakan (0, 255, 0) Kemudian parameter kelima dan terakhir adalah tebal garis kita, disini saya gunakan angka 2 saja.</p>
+			<br>
+			<br>
+			<p>Nah untuk sekarang kita beres untuk face detector, sebelum kita run kita akan membuat untuk eye detector terlebih dahulu.</p>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto5.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>setelah itu lalu kalian buatlah code seperti ini</p>
+			<br>
+
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto6.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Code kalian akan terlihat seperti ini</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto7.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Hasilnya akan terlihat seperti ini</p>
+			<br>
+			<div class="box">
+				<div class="col-4">
+						<img src="img/opencv/foto8.JPG">
+				</div>	
+			</div>
+			<br>
+			<p>Jika code kalian belum tepat, silahkan saja otak - atik dibagian nilai keakuratan. Jika sudah akurat. Kalian dapat melanjutkan untuk menerapkan Face dan Eye Detector ini kedalam Live Video dari Kamera kalian.</p>
+		</div>
+	</section>
+	<br>	
+	<br>	
+	<!----label---->
+	<section class="label">
+		<div class="container">
+			<p></p>
+		</div>
+	</section>	
+	<br>	
+	<br>		
+	<footer>
+		<div class="container">
+			<small>Copyright &copy; 2020 - Diwangga Dafa Alkautsar. All Rights Reserved.</small>
+		</div>	
+	</footer>
+
+</body>
+</html>
